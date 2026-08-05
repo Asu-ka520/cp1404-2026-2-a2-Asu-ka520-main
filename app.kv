@@ -1,0 +1,105 @@
+# TODO: Create the Kivy layout for your AlbumArchive app
+BoxLayout:
+    orientation: 'horizontal'
+
+    # Left Panel for inputs and controls
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: 0.3
+        padding: 10
+        spacing: 10
+
+        Label:
+            text: 'Sort by:'
+            size_hint_y: None
+            height: 40
+
+        Spinner:
+            id: sort_spinner
+            text: 'Completed'
+            values: ('Completed', 'Title', 'Artist', 'Year')
+            size_hint_y: None
+            height: 40
+            on_text: app.sort_albums(self.text)
+
+        Label:
+            text: 'Add New Album...'
+            size_hint_y: None
+            height: 40
+
+        Label:
+            text: 'Title:'
+            size_hint_y: None
+            height: 40
+
+        TextInput:
+            id: title_input
+            multiline: False
+            write_tab: False
+            size_hint_y: None
+            height: 40
+
+        Label:
+            text: 'Artist:'
+            size_hint_y: None
+            height: 40
+
+        TextInput:
+            id: artist_input
+            multiline: False
+            write_tab: False
+            size_hint_y: None
+            height: 40
+
+        Label:
+            text: 'Year:'
+            size_hint_y: None
+            height: 40
+
+        TextInput:
+            id: year_input
+            multiline: False
+            write_tab: False
+            size_hint_y: None
+            height: 40
+
+        Button:
+            text: 'Add Album'
+            size_hint_y: None
+            height: 50
+            on_release: app.add_new_album()
+
+        Button:
+            text: 'Clear'
+            size_hint_y: None
+            height: 50
+            on_release: app.clear_fields()
+
+        Widget:
+            # Spacer to align elements to the top
+
+    # Right Panel for dynamic albums and status messages
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: 0.7
+
+        Label:
+            id: top_status_label
+            size_hint_y: 0.1
+            font_size: 18
+            text: 'Welcome to Albums Archive 2.0'
+
+        ScrollView:
+            size_hint_y: 0.8
+            GridLayout:
+                id: albums_box
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 5
+
+        Label:
+            id: bottom_status_label
+            size_hint_y: 0.1
+            font_size: 16
+            text: ''
