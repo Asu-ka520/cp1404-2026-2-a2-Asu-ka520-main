@@ -3,7 +3,7 @@ Name: Hu Zedong
 Date Started: 2026/08/03
 Brief Project Description: A Kivy GUI application to manage an album archive,
 allowing users to add, sort, and track completed/required albums.
-GitHub URL: (copy-and-paste your URL only on the next line)
+GitHub URL: https://github.com/Asu-ka520/cp1404-2026-2-a2-Asu-ka520-main
 
 """
 # TODO: Create your main program in this file using the AlbumArchiveApp class
