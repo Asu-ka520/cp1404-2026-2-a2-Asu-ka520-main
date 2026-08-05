@@ -1,7 +1,5 @@
 """Incomplete tests for Album class."""
 
-"""Incomplete tests for Album class."""
-
 from album import Album
 
 def run_tests():

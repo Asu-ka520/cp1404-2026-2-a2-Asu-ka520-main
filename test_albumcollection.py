@@ -1,7 +1,5 @@
 """Incomplete tests for AlbumCollection class."""
 
-"""Incomplete tests for AlbumCollection class."""
-
 from album import Album
 from albumcollection import AlbumCollection
 
