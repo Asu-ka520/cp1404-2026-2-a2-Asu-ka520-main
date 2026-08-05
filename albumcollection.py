@@ -1,6 +1,3 @@
-"""..."""
-
-
 # TODO: Create your AlbumCollection class in this file
 
 
